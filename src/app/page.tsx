@@ -159,7 +159,7 @@ export default function VisioDetect() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Eye className="w-8 h-8 text-blue-400" />
-            <h1 className="text-2xl font-bold text-white">VisioDetect</h1>
+            <h1 className="text-2xl font-bold text-white">Visio</h1>
           </div>
           <button
             onClick={() => setShowClasses(!showClasses)}
@@ -204,17 +204,17 @@ export default function VisioDetect() {
         </div>
       )}
 
-      <main className="max-w-7xl mx-auto px-6 py-10">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             AI-Powered Object Detection
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-            Upload an image to instantly identify and locate objects from 80 different classes using Cmputer Vision.
+            Upload an image to instantly identify and locate objects from 80 different classes using Computer Vision.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Left Panel */}
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-gray-800/50 border border-gray-700/80 rounded-2xl p-6">
@@ -263,7 +263,7 @@ export default function VisioDetect() {
 
           {/* Right Panel (Image and Results) */}
           <div className="lg:col-span-3 space-y-6">
-            <div className="bg-gray-800/50 border border-gray-700/80 rounded-2xl p-4 aspect-w-16 aspect-h-9 flex items-center justify-center min-h-[30rem]">
+            <div className="bg-gray-800/50 border border-gray-700/80 rounded-2xl p-4 flex items-center justify-center min-h-[20rem] sm:min-h-[25rem] md:min-h-[30rem]">
               {image ? (
                 <div className="relative w-full h-full">
                   <img
@@ -297,7 +297,7 @@ export default function VisioDetect() {
 
             {detections.length > 0 && (
               <div className="bg-gray-800/50 border border-gray-700/80 rounded-2xl p-6">
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex flex-wrap items-center justify-between mb-4 gap-2">
                   <h3 className="text-xl font-bold">Detection Results</h3>
                   <div className="flex items-center gap-2 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400" />
@@ -325,6 +325,36 @@ export default function VisioDetect() {
                 </div>
               </div>
             )}
+          </div>
+        </div>
+
+        {/* About Section */}
+        <div className="mt-20 bg-gray-800/30 backdrop-blur-lg border border-gray-700/50 rounded-2xl p-8 lg:p-12">
+          <h3 className="text-3xl font-bold text-center mb-8 flex items-center justify-center gap-3">
+            <Sparkles className="w-8 h-8 text-purple-400" />
+            About This Project
+          </h3>
+          <div className="max-w-4xl mx-auto text-gray-300 space-y-6">
+            <p className="text-lg text-center">
+              <span className="font-bold text-purple-300">🔍 The Real Power of Computer Vision:</span> While this object detection model currently recognizes 80 common object categories, it's a glimpse into the broader capabilities of computer vision — not its limit.
+            </p>
+            <p className="text-center">
+              Modern Computer Vision models can be trained and adapted for high-impact applications across industries, including:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🛡️ <span className="font-bold">AI-Powered Surveillance:</span> Real-time detection of weapons, intruders, or suspicious activity.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🎯 <span className="font-bold">Facial Recognition:</span> Identity verification for access control and authentication.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🛍️ <span className="font-bold">Retail & Smart Stores:</span> Automated checkout and inventory monitoring.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🏥 <span className="font-bold">Medical Imaging:</span> Tumor detection and diagnostic assistance in X-rays/MRIs.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🛠️ <span className="font-bold">Manufacturing & QA:</span> Visual inspection for detecting defects on assembly lines.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🌾 <span className="font-bold">Agriculture:</span> Plant disease detection and livestock monitoring.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🚗 <span className="font-bold">Autonomous Vehicles:</span> Road sign and pedestrian detection.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🎮 <span className="font-bold">Augmented Reality:</span> Real-world object tracking and gesture recognition.</div>
+              <div className="bg-gray-700/50 p-4 rounded-lg border border-gray-600">🌍 <span className="font-bold">Environmental Monitoring:</span> Wildlife tracking and illegal logging detection.</div>
+            </div>
+            <p className="text-center font-semibold text-purple-300 pt-4">
+              This project is a lightweight demonstration — showing how accessible object detection can be, but it's also a gateway to more specialized, production-grade applications.
+            </p>
           </div>
         </div>
       </main>
